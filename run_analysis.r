@@ -56,6 +56,3 @@ library(plyr);
 tidy_data<-aggregate(. ~Subject + Activity, selected_data, mean)
 tidy_data<-tidy_data[order(selected_data$Subject,selected_data$Activity),]
 write.table(tidy_data, file = "tidydata.txt",row.name=FALSE)
-
-library(knitr)
-knit2html("codebook.Rmd");
